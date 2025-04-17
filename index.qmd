@@ -1,18 +1,18 @@
 ---
-title: "Isaac Flath"
-image: street.jpg
+title: "Rajesh Karra"
+image: MyGhibli_Latest.PNG
 about:
   template: jolla
   links:
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com/in/isaacflath/
+      href: https://linkedin.com/in/rajesh-karra/
     - icon: github
       text: Github
-      href: https://github.com/isaac-flath
+      href: https://github.com/rajeshkumarkarra
     - icon: twitter
       text: Twitter
-      href: https://twitter.com/isaac_flath
+      href: https://twitter.com/k_rajesh_kumar
     - icon: rss
       text: Blog RSS
       href: blog.xml
