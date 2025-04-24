@@ -155,8 +155,8 @@ window.Quarto = {
 <span class="menu-text">TIL</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../testimonials.html"> 
-<span class="menu-text">Testimonials</span></a>
+    <a class="nav-link" href="../../resources.html"> 
+<span class="menu-text">Resources</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -608,12 +608,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             const htmlDoc = parser.parseFromString(html, "text/html");
             const note = htmlDoc.getElementById(id);
             if (note !== null) {
-              const html = processXRef(id, note);
-              instance.setContent(html);
-            } 
-          }).finally(() => {
-            instance.enable();
-            instance.show();
+              try {
+                const html = processXRef(id, note.cloneNode(true));
+                instance.setContent(html);
+              } finally {
+                instance.enable();
+                instance.show();
+              }
+            }
           });
         }
       } else {
