@@ -193,7 +193,7 @@ window.Quarto = {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../resources.html"> 
-<span class="menu-text">Testimonials</span></a>
+<span class="menu-text">Resources</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -341,7 +341,7 @@ window.Quarto = {
 <p>The reason this is important is that you want to ensure that you didn’t get lucky and find a configuration out of your 300 attempts that just happens to work on the validation set but doesn’t work elsewhere. If you try enough combinations eventually you will find something that works, but the test set gives you confidence that your model works because it’s a good strategy and not that you just tried enough things to find something that works on coincidence.</p>
 <p>:::{note} Many people re-use or have more lax rules on the test set. Many people do not use one at all. In this text I am laying out the ideal state I believe we should strive for. If you choose to loosen these restrictions on the test set or do without one, I would strongly encourage you to think hard about it.</p>
 <p>To get our test set, we could have split our initial data into 3. Because we are a bit concerned about survivorship bias, let’s pull a new test set that uses recent data to and test how these strategies would perform over the last year and a half.</p>
-<p>We need to get adjusted close price. There are a variety of services that have APIs to pull from, I have picked polgygon to use here because it’s free for what we need.</p>
+<p>We need to get adjusted close price. There are a variety of services that have APIs to pull from, I have picked polgyon to use here because it’s free for what we need.</p>
 <div id="656d894d" class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>client <span class="op">=</span> RESTClient(polygon_free_api_key)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -599,7 +599,6 @@ window.Quarto = {
 <th data-quarto-table-cell-role="th">open_date</th>
 <th data-quarto-table-cell-role="th">ticker</th>
 <th data-quarto-table-cell-role="th">action</th>
-<th data-quarto-table-cell-role="th">close_date</th>
 <th data-quarto-table-cell-role="th">dte</th>
 <th data-quarto-table-cell-role="th">adj_close</th>
 </tr>
@@ -610,88 +609,69 @@ window.Quarto = {
 <td>2017-02-14</td>
 <td>A</td>
 <td>Buy</td>
-<td>2017-03-14</td>
 <td>2017-02-14</td>
 <td>49.703267</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
 <td>2017-02-16</td>
 <td>A</td>
 <td>Buy</td>
-<td>2017-03-16</td>
 <td>2017-02-16</td>
 <td>50.147135</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
 <td>2017-03-02</td>
 <td>A</td>
 <td>Buy</td>
-<td>2017-03-30</td>
 <td>2017-03-02</td>
 <td>50.679775</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
 <td>2017-03-04</td>
 <td>A</td>
 <td>Buy</td>
-<td>2017-04-01</td>
 <td>NaT</td>
 <td>NaN</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
 <td>2017-03-07</td>
 <td>A</td>
 <td>Buy</td>
-<td>2017-04-04</td>
 <td>2017-03-07</td>
 <td>50.512092</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">5</td>
 <td>2017-03-11</td>
 <td>A</td>
 <td>Buy</td>
-<td>2017-04-08</td>
 <td>NaT</td>
 <td>NaN</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">6</td>
 <td>2017-03-16</td>
 <td>A</td>
 <td>Buy</td>
-<td>2017-04-13</td>
 <td>2017-03-16</td>
 <td>52.327016</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">7</td>
 <td>2017-03-18</td>
 <td>A</td>
 <td>Buy</td>
-<td>2017-04-15</td>
 <td>NaT</td>
 <td>NaN</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">8</td>
 <td>2017-05-24</td>
 <td>A</td>
 <td>Buy</td>
-<td>2017-06-21</td>
 <td>2017-05-24</td>
 <td>58.568656</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">9</td>
 <td>2017-05-25</td>
 <td>A</td>
 <td>Buy</td>
-<td>2017-06-22</td>
 <td>2017-05-25</td>
 <td>58.637875</td>
 </tr>
@@ -873,49 +853,49 @@ Note
 <td>10583.600318</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2017-03-29</td>
+<td>2017-03-29</td>
 <td>5225.468769</td>
 <td>-93.792090</td>
 <td>11510.549118</td>
 <td>5250.575701</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2017-02-16</td>
+<td>2017-02-16</td>
 <td>13205.019794</td>
 <td>0.000000</td>
 <td>0.000000</td>
 <td>13187.821518</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2017-05-04</td>
+<td>2017-05-04</td>
 <td>12577.980970</td>
 <td>-17.387456</td>
 <td>3561.027174</td>
 <td>12536.763156</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2017-03-30</td>
+<td>2017-03-30</td>
 <td>3812.650344</td>
 <td>-42.581923</td>
 <td>16811.036857</td>
 <td>3830.179057</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2017-05-16</td>
+<td>2017-05-16</td>
 <td>13842.232885</td>
 <td>114.058575</td>
 <td>4165.332503</td>
 <td>13868.190505</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2017-05-01</td>
+<td>2017-05-01</td>
 <td>6789.531992</td>
 <td>154.664868</td>
 <td>5354.190170</td>
 <td>6754.560876</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2017-06-15</td>
+<td>2017-06-15</td>
 <td>0.000000</td>
 <td>203.997769</td>
 <td>10639.412827</td>
@@ -1199,7 +1179,7 @@ Model buy percentage=0.04311919191919192</code></pre>
 <span id="cb47-12"><a href="#cb47-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb47-13"><a href="#cb47-13" aria-hidden="true" tabindex="-1"></a>ax.hist(h0,alpha<span class="op">=</span><span class="fl">0.5</span>,bins<span class="op">=</span><span class="dv">60</span>,label <span class="op">=</span> <span class="st">'h0'</span>,<span class="bu">range</span><span class="op">=</span>(<span class="op">-</span><span class="fl">.15</span>,<span class="fl">.15</span>))</span>
 <span id="cb47-14"><a href="#cb47-14" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> calculate_returns(model_h1(valid),valid)</span>
-<span id="cb47-15"><a href="#cb47-15" aria-hidden="true" tabindex="-1"></a>ax.scatter(x<span class="op">=</span>x,y<span class="op">=</span><span class="dv">0</span>,marker<span class="op">=</span><span class="st">"P"</span>,color<span class="op">=</span><span class="st">'red'</span>,s<span class="op">=</span><span class="dv">300</span>)</span>
+<span id="cb47-15"><a href="#cb47-15" aria-hidden="true" tabindex="-1"></a>ax.scatter(x<span class="op">=</span>x,y<span class="op">=</span><span class="dv">0</span>,marker<span="op">=</span><span class="st">"P"</span>,color<span="op">=</span><span class="st">'red'</span>,s<span="op">=</span><span class="dv">300</span>)</span>
 <span id="cb47-16"><a href="#cb47-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb47-17"><a href="#cb47-17" aria-hidden="true" tabindex="-1"></a>title_r1 <span class="op">=</span> <span class="ss">f"h0 mean=</span><span class="sc">{</span>np<span class="sc">.</span>array(h0)<span class="sc">.</span>mean()<span class="sc">:.4f}</span><span class="ch">\n</span><span class="ss">"</span></span>
 <span id="cb47-18"><a href="#cb47-18" aria-hidden="true" tabindex="-1"></a>title_r2 <span class="op">=</span> <span class="ss">f"h1 value=</span><span class="sc">{</span>x<span class="sc">:.4f}</span><span class="ss">"</span></span>
@@ -1681,7 +1661,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
       // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      let href = ref.getAttribute('data-footnote-href') or ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
@@ -1704,14 +1684,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
+    if (id === null or id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
+      if (note.children and note.children.length > 2) {
         container.appendChild(note.children[0].cloneNode(true));
         for (let i = 1; i < note.children.length; i++) {
           const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
+          if (child.tagName === "P" and child.innerText === "") {
             continue;
           } else {
             container.appendChild(child.cloneNode(true));
@@ -1797,7 +1777,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             // This should only happen for chapter cross references
             // (since there is no id in the URL)
             // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+            if (note.children.length > 0 and note.children[0].tagName === "HEADER") {
               note.children[0].remove();
             }
             const html = processXRef(null, note);
@@ -1841,7 +1821,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             const bottom = lastEl.offsetTop + lastEl.offsetHeight;
             height = bottom - top;
           }
-          if (top !== null && height !== null && parent !== null) {
+          if (top !== null and height !== null and parent !== null) {
             // cook up a div (if necessary) and position it 
             let div = window.document.getElementById("code-annotation-line-highlight");
             if (div === null) {
