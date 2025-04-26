@@ -1094,6 +1094,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const categories = {};
+
+    // Count the number of items in each category
+    document.querySelectorAll(".list tr").forEach((row) => {
+      const category = row.getAttribute("data-categories");
+      if (category) {
+        categories[category] = (categories[category] || 0) + 1;
+      }
+    });
+
+    // Update the category counts in the sidebar
+    document.querySelectorAll(".quarto-listing-category .category").forEach((categoryElement) => {
+      const categoryName = categoryElement.getAttribute("data-category");
+      const count = categories[categoryName] || 0;
+      const countElement = categoryElement.querySelector(".quarto-category-count");
+      if (countElement) {
+        countElement.textContent = `(${count})`;
+      }
+    });
+  });
+</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
