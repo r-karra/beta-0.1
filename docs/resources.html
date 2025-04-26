@@ -1156,7 +1156,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const categories = {};
+    const categories = { "": 0 }; // Initialize "All" category with 0
 
     // Count the number of items in each category
     document.querySelectorAll(".list tr").forEach((row) => {
@@ -1164,6 +1164,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (category) {
         categories[category] = (categories[category] || 0) + 1;
       }
+      // Increment the "All" category count for every row
+      categories[""]++;
     });
 
     // Update the category counts in the sidebar
