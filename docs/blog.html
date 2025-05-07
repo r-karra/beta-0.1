@@ -1091,42 +1091,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     };
   });
 </script>
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // Initialize List.js for the table
-    const listing = new List('listing-listing', {
-      valueNames: ['listing-date', 'listing-title', 'listing-categories', { data: ['index'] }],
-      page: 30,
-      pagination: {
-        innerWindow: 2,
-        left: 1,
-        right: 1,
-        paginationClass: 'pagination',
-        item: '<li class="page-item"><a class="page page-link" href="#"></a></li>'
-      }
-    });
-
-    // Link the filter input to List.js
-    const filterInput = document.querySelector('.quarto-listing-filter .search');
-    if (filterInput) {
-      filterInput.addEventListener('input', function () {
-        const searchTerm = filterInput.value;
-        listing.search(searchTerm);
-      });
-    }
-
-    // Function to apply sorting based on dropdown selection
-    window.applySorting = function (selectElement) {
-      const selectedOption = selectElement.options[selectElement.selectedIndex];
-      const sortValue = selectedOption.value;
-      const sortDirection = selectedOption.getAttribute('data-direction');
-
-      if (sortValue) {
-        listing.sort(sortValue, { order: sortDirection });
-      }
-    };
-  });
-</script>
+  
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
