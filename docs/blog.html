@@ -20,6 +20,10 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+
+.post-iframe {
+  border: none;
+}
 </style>
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
@@ -145,7 +149,7 @@ window.Quarto = {
 <meta property="og:locale" content="en_US">
 <meta name="twitter:title" content="Blog – Rajesh Karra">
 <meta name="twitter:image" content="https://rajeshkumarkarra.github.io/MyGhibli_Latest.PNG">
-<meta name="twitter:creator" content="@rajesh_karra>
+<meta name="twitter:creator" content="@rajesh_karra">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -1036,10 +1040,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
     // Link the filter input to List.js
     const filterInput = document.querySelector('.quarto-listing-filter .search');
-    filterInput.addEventListener('input', function () {
-      const searchTerm = filterInput.value;
-      listing.search(searchTerm);
-    });
+    if (filterInput) {
+      filterInput.addEventListener('input', function () {
+        const searchTerm = filterInput.value;
+        listing.search(searchTerm);
+      });
+    }
 
     // Function to apply sorting based on dropdown selection
     window.applySorting = function (selectElement) {
