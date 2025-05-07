@@ -973,31 +973,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const categories = {}; // Object to store category counts
+  document.addEventListener("DOMContentLoaded", function () {
+    const categories = {}; // Object to store category counts
 
-      // Count the number of items in each category
-      document.querySelectorAll(".quarto-post").forEach((post) => {
-        const categoryList = post.getAttribute("data-categories");
-        if (categoryList) {
-          const categoryArray = categoryList.split(",").map((cat) => cat.trim());
-          categoryArray.forEach((category) => {
-            categories[category] = (categories[category] || 0) + 1;
-          });
-        }
-      });
-
-      // Update the category counts in the sidebar
-      document.querySelectorAll(".quarto-listing-category .category").forEach((categoryElement) => {
-        const categoryName = categoryElement.getAttribute("data-category");
-        const count = categories[categoryName] || 0;
-        const countElement = categoryElement.querySelector(".quarto-category-count");
-        if (countElement) {
-          countElement.textContent = `(${count})`;
-        }
-      });
+    // Count the number of items in each category
+    document.querySelectorAll(".quarto-post").forEach((post) => {
+      const categoryList = post.getAttribute("data-categories");
+      if (categoryList) {
+        const categoryArray = categoryList.split(",").map((cat) => cat.trim());
+        categoryArray.forEach((category) => {
+          categories[category] = (categories[category] || 0) + 1;
+        });
+      }
     });
-  </script>
+
+    // Update the category counts in the sidebar
+    document.querySelectorAll(".quarto-listing-category .category").forEach((categoryElement) => {
+      const categoryName = categoryElement.getAttribute("data-category");
+      const count = categories[categoryName] || 0;
+      const countElement = categoryElement.querySelector(".quarto-category-count");
+      if (countElement) {
+        countElement.textContent = `(${count})`;
+      }
+    });
+  });
+</script>
   <script>
   document.addEventListener("DOMContentLoaded", function () {
     const listing = new List('listing-resources', {
