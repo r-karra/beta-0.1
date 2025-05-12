@@ -159,6 +159,12 @@ blockquote > pre {
   width: 100%; /* Ensures it spans the full width */
 }
 
+.nav-footer-right img {
+  width: 100%; /* Set the width to 100% of the container */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 96px; /* Optional: Limit the maximum width */
+}
+
 .footer-items {
   display: flex;
   gap: 10px; /* Adds spacing between icons */
