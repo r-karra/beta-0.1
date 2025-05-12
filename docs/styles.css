@@ -88,8 +88,11 @@ div.description {
   opacity: 70%;
 }
 
-
-
+.nav-footer-right {
+  display: flex;
+  justify-content: flex-end; /* Aligns items to the right */
+  align-items: center; /* Vertically centers the items */
+}
 
 /* .cell {
   margin-bottom: 1rem;
