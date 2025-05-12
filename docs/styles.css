@@ -147,15 +147,19 @@ blockquote > pre {
 } */
 
 .footer-items {
-  float: right;
+  display: flex;
+  justify-content: flex-end; /* Pushes items to the right */
   list-style: none; /* Remove default list styling */
   padding: 0; /* Remove default padding */
   margin: 0; /* Remove default margin */
 }
 
 .footer-items .nav-item {
-  float: left; /* Float the list items to the left to align them in a row from right */
-  margin-left: 10px; /* Add spacing */
+  margin-left: 10px; /* Add some spacing between the icons */
+}
+
+.footer-items .nav-item:first-child {
+  margin-left: 0; /* Remove left margin for the first icon */
 }
 
 .nav-footer {
