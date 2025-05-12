@@ -146,6 +146,18 @@ blockquote > pre {
   font-style: italic;
 } */
 
+.footer-items {
+  float: right;
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+.footer-items .nav-item {
+  float: left; /* Float the list items to the left to align them in a row from right */
+  margin-left: 10px; /* Add spacing */
+}
+
 .nav-footer {
   display: flex;
   justify-content: space-between; /* Space between left and right sections */
