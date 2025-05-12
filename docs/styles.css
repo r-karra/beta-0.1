@@ -149,13 +149,13 @@ blockquote > pre {
 .nav-footer {
   display: flex;
   justify-content: space-between; /* Space between left and right sections */
-  align-items: center; /* Vertically aligns items */
+  align-items: right; /* Vertically aligns items */
 }
 
 .nav-footer-right {
   display: flex;
   justify-content: flex-end; /* Aligns items to the right */
-  align-items: center; /* Vertically centers the items */
+  align-items: right; /* Vertically centers the items */
   width: 100%; /* Ensures it spans the full width */
 }
 
