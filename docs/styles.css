@@ -146,9 +146,23 @@ blockquote > pre {
   font-style: italic;
 } */
 
+.nav-footer {
+  display: flex;
+  justify-content: space-between; /* Ensures left and right sections are spaced apart */
+  align-items: center; /* Vertically aligns items */
+}
+
 .nav-footer-right {
   display: flex;
   justify-content: flex-end; /* Aligns items to the right */
   align-items: center; /* Vertically centers the items */
-  width: 100%; /* Ensures it spans the full width of the footer */
+  width: 100%; /* Ensures it spans the full width */
+}
+
+.footer-items {
+  display: flex;
+  gap: 10px; /* Adds spacing between icons */
+  list-style: none; /* Removes default list styling */
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
 }
