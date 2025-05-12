@@ -145,3 +145,10 @@ blockquote > pre {
   font-size: 75%;
   font-style: italic;
 } */
+
+.nav-footer-right {
+  display: flex;
+  justify-content: flex-end; /* Aligns items to the right */
+  align-items: center; /* Vertically centers the items */
+  width: 100%; /* Ensures it spans the full width of the footer */
+}
